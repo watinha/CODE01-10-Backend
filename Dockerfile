@@ -4,4 +4,6 @@ WORKDIR /app
 
 RUN pip install Flask
 
-CMD ['python', 'app.py']
+expose 3000
+
+CMD ["python", "app.py"]
