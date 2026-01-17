@@ -1,0 +1,2 @@
+h1 { background-color: red; transition: all linear 1s; }
+h1:hover { transform: scale(2) rotate(720deg); }

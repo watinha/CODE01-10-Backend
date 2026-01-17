@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>About Me</title>
+  </head>
+  <body>
+    <h1>About me - {{username}}</h1>
+    <p>This is a brief introduction about myself, an {{age}}. I like:</p>
+    <ul>
+    {% for product in products %}
+      <li>{{ product }}</li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
