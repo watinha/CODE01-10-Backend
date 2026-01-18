@@ -10,3 +10,5 @@ def list_comments():
 @comment_bp.route('/<int:comment_id>')
 def get_comment(comment_id):
     return f"Detalhes do comentário {comment_id}"
+
+

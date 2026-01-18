@@ -11,3 +11,5 @@ def hello_world():
     idade /= 0  # This will raise a ZeroDivisionError
 
     return 'Hello, World!'
+
+

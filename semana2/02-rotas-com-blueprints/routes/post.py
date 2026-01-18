@@ -10,3 +10,5 @@ def list_posts():
 @post_bp.route('/<int:post_id>')
 def get_post(post_id):
     return f"Detalhes da postagem {post_id}"
+
+

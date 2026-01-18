@@ -11,7 +11,7 @@ def home():
 def health():
     return "Uns posts!"
 
-@app.route('/comment')
+@app.route('/comment/')
 def ready():
     return 'Uns comments!'
 
@@ -24,7 +24,7 @@ def comment_detail(comment_id):
 def post_detail(post_id):
     return f'Post com ID {post_id}'
 
-@app.route('/user/<str:username>/posts')
+@app.route('/user/<string:username>/posts')
 def user_posts(username):
     return f'Posts do usuário {username}'
 
