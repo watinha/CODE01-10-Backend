@@ -14,7 +14,9 @@ class Users ():
 
 
     def select_by_name (self, name):
-        self._cursor.execute('SELECT name, description, age FROM users WHERE name = ?', (name,))
+        self._cursor.execute(
+                'SELECT name, description, age FROM users WHERE name = ?',
+                (name,))
         return self._cursor.fetchone()
 
 

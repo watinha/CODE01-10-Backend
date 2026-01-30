@@ -14,7 +14,8 @@ def update_users ():
     for old_name in list(new_users.keys()):
         new_name = new_users[old_name]
 
-        cursor.execute('UPDATE users SET name = ? WHERE name = ?', (new_name, old_name))
+        cursor.execute('UPDATE users SET name = ? WHERE name = ?',
+                       (new_name, old_name))
 
     conn.commit()
     conn.close()
