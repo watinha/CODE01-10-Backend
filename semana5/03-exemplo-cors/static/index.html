@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <title>Agora do navegador</title>
+  </head>
+  <body>
+    <h1>Agora do navegador</h1>
+    <button>uau!!!</button>
+    <div style="background-color:red;padding:20px"></div>
+
+    <script type="text/javascript">
+      let button = document.querySelector("button"),
+          div_mensagem = document.querySelector("div");
+      button.addEventListener("click", async function() {
+        let resposta = await fetch("http://localhost:3000/"),
+            dados = await resposta.json();
+        div_mensagem.textContent = `A mensagem foi: ${dados.message}`;
+      });
+
+    </script>
+  </body>
+</html>

@@ -38,7 +38,12 @@ def show(name):
 def get_posts (name):
     posts_model = Posts(get_connection().cursor())
     posts = posts_model.get_posts_by_user(name)
-    return [ { 'title': post[0], 'content': post[1], 'posted_at': post[2] } for post in posts ]
+    return [
+            { 
+              'title': post[0],
+              'content': post[1],
+              'posted_at': post[2]
+            } for post in posts ]
 
 
 if __name__ == '__main__':
