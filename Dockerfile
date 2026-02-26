@@ -5,7 +5,7 @@ WORKDIR /app
 RUN apk add sqlite
 RUN pip install Flask Faker flask-cors \
       Flask-JWT-Extended pydantic flask_pydantic \
-      Flask_Caching bleach flask_limiter
+      Flask_Caching bleach flask_limiter bcrypt
 
 expose 3000
 
