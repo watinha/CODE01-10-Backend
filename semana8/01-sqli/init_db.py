@@ -1,4 +1,4 @@
-import sqlite3, bycrypt
+import sqlite3, bcrypt
 
 
 def init_db():
@@ -16,7 +16,9 @@ def init_db():
     cursor.execute('''
         INSERT OR IGNORE INTO users (username, password) VALUES
         (?, ?)
-    ''', ('admin', bycrypt.hashpw('admin', bycrypt.gensalt())))
+    ''', ('admin', bcrypt.hashpw('admin'.encode('utf-8'), bcrypt.gensalt())))
 
     conn.commit()
     conn.close()
+
+init_db()

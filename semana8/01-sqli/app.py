@@ -12,9 +12,6 @@ app.config['JWT_SECRET_KEY'] = 'Chave super secreta'
 jwt = JWTManager(app)
 
 
-app = Flask(__name__)
-
-
 def get_db():
     if 'db' not in g:
         g.db = sqlite3.connect('database.db')

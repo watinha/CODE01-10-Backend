@@ -7,13 +7,12 @@ class User:
         self._cursor = cursor
 
     def login (self, username, password):
-        hashed_password = bcrypt.hashpw(password, bycrypt.gensalt())
         self._cursor.execute(
-            'SELECT * FROM users WHERE username = ? AND password = ?',
-            (username, hashed_password)
+            'SELECT username, password FROM users WHERE username = ?',
+            (username,)
         )
         user = self._cursor.fetchone()
-        if user:
+        if bcrypt.checkpw(password.encode('utf-8'), user[1]):
             return user
         return None
 
